@@ -1,0 +1,16 @@
+Please read the following to learn how to invoice us:
+
+http://accounts.envato.com
+
+There you will be able to create an account and log-in to our online invoicing application. Use the access code "ShowMeTheEnvoicing" to sign up.
+
+You must upload an official invoice that you have created. Here are our requirements for creating a valid invoice - please follow them to the letter to ensure you are paid on time:
+
+<ul><li>Give your invoice the heading 'INVOICE'.</li>
+<li>Make sure you include your Paypal email address or Moneybookers details clearly marked in the invoice.</li>
+<li>Please bill to: Envato Pty Ltd, PO Box 21177, Little Lonsdale Street, VIC 8011 (plus the domain that you are doing work for, eg: Psd.tutsplus.com).</li>
+<li>Please include your Company Name and Your Company Address on the invoice. If you are a freelancer then please include Your Name and Your Address on the invoice.</li>
+<li>If you are an Australian business you MUST include a valid ABN number on your Invoice. We cannot accept an Invoice from an Australian company (includes freelancers) without a valid ABN number. You can apply here and have an ABN within half-an-hour: http://www.abr.gov.au/ABR_BC/</li>
+<li>Please provide descriptions of each charge on the invoice.</li>
+</ul>Once accepted and improved by an Envato team-member, your invoice will be paid within the first two weeks of the month after you submit your invoice.
+

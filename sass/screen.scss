@@ -1,0 +1,459 @@
+@import 'compass/css3';
+@import 'compass/reset/utilities';
+
+$background_color: #e3e3e3;
+
+html {
+	background: $background_color;
+}
+body {
+	margin: 0;
+	font-family: sans-serif;
+	background: $background_color;
+/*	background: -webkit-gradient(
+		linear,
+		left top, left bottom,
+		from(#c5c5c5),
+		to(#e3e3e3)
+	);*/
+	font-size: 14px;
+
+}
+
+.hidden {
+   display: none;
+}
+
+.container {
+	width: 960px;
+	position: relative;
+	margin: auto;
+	clear: both;
+	overflow: hidden;
+}
+
+h1 {
+	color: white;
+	margin-top: 0;
+}
+h2 {
+	font-family: 'Maiden Orange';
+	font-size: 35px;
+	margin-bottom: .5em;
+	margin-top: 0;
+	color: #342921;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a img {
+	border: none;
+}
+
+/* HTML5 Stuff */
+@include reset-html5; 
+
+/* Header */
+
+.header {
+	background: #342921;
+	height: 47px;
+	margin-bottom: 70px;
+	border-bottom: 1px solid #f8f8f8;
+}
+header {
+	width: 960px;
+	margin: auto;
+}
+
+header h1 {
+	float: left;
+	
+}
+
+header h1 > a {
+	float: left;
+	position: relative;
+	top: 20px;
+}
+
+header:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 1%;
+	visibility: hidden;
+}
+
+header a {
+	color: white;
+}
+
+.add_post, h1 span a {
+	padding-top: 15px;
+	top: 9px;
+	font-size: 13px;
+	position: relative;
+	font-family: sans-serif;
+	top: -4px;
+	color: #A1917B;
+}
+
+h1 span { font-weight: normal; float: right;}
+
+
+.add_post:before {
+	content: '--';
+}
+
+/* Stats */
+dl, dt, dd {
+	margin: 0;
+	padding: 0;
+}
+
+dt, dd {
+	display: inline;
+}
+
+
+header dl {
+	float: right;
+	font-size: 11px;
+	color: white;
+	margin-top: 17px;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dt:after {
+	content: ':';
+}
+
+dd {
+	margin-right: 8px;
+	padding-right: 8px;
+	color: #A1917B;
+}
+
+dd:last-child {
+	margin-right: 0;
+	padding-right: 0;
+}
+/* Table */
+
+table {
+	width: 100%;
+	background: #e3e3e3;
+	border: 1px solid white;
+	position: relative;
+	border-collapse: collapse;
+}
+
+thead tr {
+	color: white;
+	height: 35px;
+	background: #342921;
+
+}
+
+td {
+	width: 200px;
+	padding: .5em 1.5em;
+	
+}
+
+td a {
+	color: black;
+}
+
+th {
+	text-align: left;
+	padding: .5em 1.5em;
+	color: white;
+	font-weight: normal;
+}
+
+th a {
+	color: white;
+	cursor: pointer;
+}
+.title {
+	width: 400px;
+}
+
+.cost {
+	width: 60px;
+}
+
+.cost:before {
+	content: '$';
+	margin-right: -3px;
+}
+
+.post_type {
+	width: 100px;
+	text-transform: uppercase;
+}
+
+.date {
+	width: 80px;
+}
+
+tr.premium {
+	background: #d95f00;
+}
+
+tr.quick_tip {
+	background: #58aa9c;
+}
+
+
+
+tr.regular {
+	background: #e3e3e3;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #c5c3c3;
+}
+
+tr.basix {
+   background: #e9eb48;
+}
+
+.options li{
+	float: left;
+	list-style: none;
+	font-weight: bold;
+	position: relative;
+	margin-right: 5px;
+}
+
+.options {
+	width: 60px;
+}
+.options ul {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	top: -4px;
+}
+
+.options a {
+	display: block;
+}
+
+.update_row {
+	background: url(../img/icons.png) no-repeat -103px;
+	
+}
+
+.delete_row {
+	background: url(../img/icons.png) no-repeat -78px;
+}
+
+.icon {
+	text-indent: -9999px;
+	width: 24px;
+	height: 25px;
+	position: relative;
+}
+
+.filter {
+float: right;
+position: relative;
+margin-top: -40px;
+}
+
+.filter h4 {
+	display: inline;
+}
+
+.total {
+	background: #292929;
+	color: white;
+}
+/* Form */
+label { display: block; }
+
+.errors {
+	color: red;
+}
+
+
+/* Overlay for Add Post */
+.overlay {
+	background: rgba(255,255,255,.95);
+	padding: 2em;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	width: 470px;
+	left: 50%;
+	top: 30px;
+	margin-left: -235px;
+   @include box-shadow(0 0 10px -3px rgba(0,0,0,.7));
+	
+}
+
+.close {
+	background: url(../img/icons.png) no-repeat -51px;
+	display: block;
+	position: absolute;
+	top: 4px;
+	right: -12px;
+	-webkit-transform: rotate(45deg);
+	cursor: pointer;	
+}
+
+/* Form */
+input[type=text] {
+	
+
+}
+
+
+textarea {
+	height: 100px;
+}
+
+input[type=text], textarea,
+input[type=password] {
+	width: 450px;
+	border: 1px solid #e3e3e3;
+	padding: 6px;
+	margin-top: 5px;
+	
+}
+
+
+/* Filtering */
+#filter_month {
+	display: none;
+}
+
+
+/* Admin */
+
+.admin_form {
+	position: relative;
+	padding: 0;
+	width: 500px;
+	margin: 0 auto;
+	display: none; /* shown with JS */
+}
+
+.no-js .admin_form {
+	display: block;
+}
+
+.admin_form form {
+	background: #e3e3e3;
+	border: 1px solid white;
+	outline: 1px solid #c5c5c5;
+	margin-top: 20px;
+}
+
+.admin_form label {
+	text-shadow: 0 1px 0 white;
+	color: #342921;
+}
+
+.admin_form h1 {
+	background: #342921;
+	font-family: 'Maiden Orange';
+	color: white;
+	padding: 10px 25px 5px;
+	border-bottom: 1px solid white;
+}
+
+.admin_form p {
+	margin-left: 25px; margin-right: 25px;
+}
+
+.admin_form input[type=text],
+.admin_form input[type=password] {
+	width: 97%;
+}
+
+.admin_form input[type=submit],
+a.button {
+	background: #342921;
+	color: white;
+	padding: 8px;
+	border: none;
+	border-top: 1px solid white;
+   @include border-radius(4px);
+	cursor: pointer;
+   margin-right: 20px;
+   font-size: 12px;
+   cursor: pointer;
+}
+
+.admin_form input[type=submit]:hover,
+.admin_form input[type=submit]:active,
+.button:hover {
+	background: #4c3a2c;
+   text-decoration: none;
+}
+
+.config_form p span {
+   font-size: 12px;
+   font-weight: bold;
+}
+
+.config_form textarea {
+   height: 250px;
+   width: 97%;
+}
+
+.config_form label{
+  display: inline;
+}
+
+fieldset {
+	border: none;
+	margin: 0; padding: 0;
+	margin-top: 40px;
+}
+
+
+/* Footer */
+.footer_options {
+	margin-left: 0; padding-left: 0;
+	overflow: hidden;
+	float: right;
+}
+
+.footer_options a {
+	font-size: 12px;
+	line-height: 9px;
+	text-transform: lowercase;
+}
+
+.footer_options li {
+	float: left;
+	margin: 0;
+	padding-right: 10px; 
+	padding-left: 10px;
+	list-style: none;
+	border-right: 1px solid #666;
+	border-left: 1px solid white;
+}
+
+.footer_options li:last-child {
+	border-right: none;
+	padding-right: 0;
+}
+
+.footer_options li:first-child {
+	border-left: none;
+	padding-left: 0;
+}
