@@ -7,17 +7,20 @@
       </h1>
 		
 		<dl>
-			<dt>Total Expenditures</dt>
+			<dt>Expenditures</dt>
 			<dd id="total_expenses"></dd>
 			
-			<dt>Available Budget</dt>
+			<dt>Budget</dt>
 			<dd id="budget">$<?php echo $config_options->budget; ?></dd>
 			
 			<dt>Difference</dt>
 			<dd id="difference">0</dd>
 			
-			<dt>Total Postings this Month</dt>
-			<dd id="post_count">0</dd>
+			<dt>Total Postings</dt>
+         <dd id="post_count">0</dd>
+
+         <dt>Avg. Cost</dt>
+         <dd id="average_cost">0</dd>
 		</dl>
 	</header>
 </div>
@@ -42,10 +45,10 @@
 		<h4>Filter By:</h4>
 		<select>
 			<option value="all" selected="selected">All</option>
-			<option value="premium">Premium</option>
-			<option value="quick_tip">Quick Tips</option>
-			<option value="basix">Basix</option>
 			<option value="regular">Regular Posts</option>
+			<option value="basix">Basix</option>
+			<option value="quick_tip">Quick Tips</option>
+			<option value="premium">Premium</option>
 			<option value="month">Month</option>
 		</select>
 		
@@ -92,7 +95,10 @@
 						break;
 					case 'quick_tip' : 
 						echo '<tr class="quick_tip">';
-						break;
+                  break;
+               case 'basix' :
+                  echo '<tr class="basix">';
+                  break;
 					default : 
 						echo '<tr class="regular row">';
 				}
