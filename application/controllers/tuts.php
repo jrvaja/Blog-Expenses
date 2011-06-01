@@ -28,7 +28,16 @@ class Tuts extends CI_Controller {
 		);
 		
 		$this->load->view( 'template', $data );
-	}
+   }
+
+   public function date()
+   {
+      $year = $this->uri->segment(4);
+      if ( strlen( $year < 4 ) ) {
+         $year = date('Y');
+      }
+      $this->index(null, $this->uri->segment(3), $year);
+   }
 	
 	public function add()
 	{

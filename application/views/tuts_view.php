@@ -7,39 +7,30 @@
       </h1>
 		
 		<dl>
-			<dt>Expenses</dt>
+			<dt>Total Expenditures</dt>
 			<dd id="total_expenses"></dd>
 			
-			<dt>Budget</dt>
+			<dt>Available Budget</dt>
 			<dd id="budget">$<?php echo $config_options->budget; ?></dd>
 			
 			<dt>Difference</dt>
 			<dd id="difference">0</dd>
 			
-			<dt>Total Postings</dt>
+			<dt>Total Postings this Month</dt>
 			<dd id="post_count">0</dd>
-
-			<dt>Avg. Cost</dt>
-			<dd id="average_cost">0</dd>
 		</dl>
 	</header>
 </div>
 	
 <div class="container">
 	
-	<?php if ( gettype( $rows ) === 'string' ) : ?>
 	<h2>
-		No expenditures or records for this month.
-		<span>
-			<a href="<?php echo site_url('tuts/add');?>" class="add_post icon"> 
-				Add New Entry 
-			</a>
-		</span> 
-	</h2>
-		
-	<?php else : ?>
-	<h2> 
-		Expenses in <?php echo $month; ?> 
+      <?php if ( gettype( $rows ) === 'string' ) : ?>
+      No expenditures or records for this month.
+      <?php else : ?>
+      Expenses in <?php echo $month; ?> 
+      <?php endif; ?>
+
 		<span>
 			<a href="<?php echo site_url('tuts/add');?>" class="add_post icon"> 
 				Add New Entry 
@@ -53,8 +44,8 @@
 			<option value="all" selected="selected">All</option>
 			<option value="premium">Premium</option>
 			<option value="quick_tip">Quick Tips</option>
-			<option value="regular">Regular Posts</option>
 			<option value="basix">Basix</option>
+			<option value="regular">Regular Posts</option>
 			<option value="month">Month</option>
 		</select>
 		
@@ -73,7 +64,6 @@
 			<option value="December">December</option>
 		</select>
 	</div>
-	<?php endif; ?>
 	
 	
 	<table id="expenses">
@@ -102,10 +92,7 @@
 						break;
 					case 'quick_tip' : 
 						echo '<tr class="quick_tip">';
-                  break;
-               case 'basix' :
-                  echo '<tr class="basix">';
-                  break;
+						break;
 					default : 
 						echo '<tr class="regular row">';
 				}
